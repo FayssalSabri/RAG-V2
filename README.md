@@ -26,8 +26,9 @@ Ce projet est un **chatbot intelligent** conçu pour répondre aux questions sur
 
 ```
 /project
-├── main.py        # Script principal pour l'app Chainlit
+├── main.py                    # Script principal pour l'app Chainlit
 ├── get_embedding_function.py  # Embedding function utilisée pour Chroma
+├── data/                      # Data 
 ├── chroma/                    # Base vectorielle persistée
 ├── requirements.txt           # Dépendances Python
 └── README.md
