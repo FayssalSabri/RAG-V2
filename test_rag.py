@@ -1,7 +1,7 @@
 from query_data import query_rag
 from langchain_community.llms.ollama import Ollama
 import warnings
-warnings.filterwarnings("ignore", category=UserWarning)
+warnings.filterwarnings("ignore")
 EVAL_PROMPT = """
 Expected Response: {expected_response}
 Actual Response: {actual_response}
