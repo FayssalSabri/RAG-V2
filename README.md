@@ -67,7 +67,7 @@ ollama run mistral
 ### 4. Lancer l’application Chainlit
 
 ```bash
-chainlit run chatbot_chainlit.py
+chainlit run main.py
 ```
 
 
