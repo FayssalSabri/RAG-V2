@@ -1,4 +1,5 @@
-# 🧠 Monopoly AI Assistant – Chatbot RAG avec Chainlit, Ollama et Chroma
+# 🧠 Monopoly AI Assistant 
+## Chatbot RAG avec Chainlit, Ollama et Chroma
 
 ![Chatbot UI](Images/Monopoly.png)
 
