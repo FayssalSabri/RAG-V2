@@ -11,10 +11,7 @@ The chatbot is accessible via a simple web interface built with Flask.
 
 - Semantic search in a PDF document database using ChromaDB.  
 - Contextual response generation with an LLM model (Ollama - Mistral).  
-- Simple web interface to ask questions and display answers.  
-- Intelligent handling of specific questions (e.g., "Who are you?") with custom responses.  
-- Suppresses TensorFlow warnings from output.  
-- Easy deployment with Docker.
+- Web interface to ask questions and display answers.  
 
 ---
 
