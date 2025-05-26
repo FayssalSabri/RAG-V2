@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Chatbot IA - Fayssal</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: 2rem auto; }
+        #chatbox { border: 1px solid #ccc; padding: 1rem; height: 400px; overflow-y: auto; }
+        #user-input { width: 80%; padding: 0.5rem; }
+        #send-btn { padding: 0.5rem; }
+        .user { color: blue; }
+        .bot { color: green; }
+        .message { margin: 0.5rem 0; }
+    </style>
+</head>
+<body>
+    <h1>🤖 Monopoly Chat</h1>
+    <div id="chatbox"></div>
+    <input type="text" id="user-input" placeholder="ask your question..." autocomplete="off" />
+    <button id="send-btn">Envoyer</button>
+
+    <script>
+        const chatbox = document.getElementById('chatbox');
+        const userInput = document.getElementById('user-input');
+        const sendBtn = document.getElementById('send-btn');
+
+        function appendMessage(sender, text) {
+            const div = document.createElement('div');
+            div.classList.add('message', sender);
+            div.textContent = text;
+            chatbox.appendChild(div);
+            chatbox.scrollTop = chatbox.scrollHeight;
+        }
+
+        async function sendQuestion() {
+            const question = userInput.value.trim();
+            if (!question) return;
+            appendMessage('user', 'you: ' + question);
+            userInput.value = '';
+
+            try {
+                const res = await fetch('/ask', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({question})
+                });
+                const data = await res.json();
+                if (data.response) {
+                    appendMessage('bot', '🤖 : ' + data.response);
+                } else if (data.error) {
+                    appendMessage('bot', 'Erreur: ' + data.error);
+                }
+            } catch (error) {
+                appendMessage('bot', 'Erreur de connexion au serveur.');
+            }
+        }
+
+        sendBtn.addEventListener('click', sendQuestion);
+        userInput.addEventListener('keypress', e => {
+            if (e.key === 'Enter') sendQuestion();
+        });
+    </script>
+</body>
+</html>
