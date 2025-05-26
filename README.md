@@ -1,6 +1,6 @@
 # Monopoly Chatbot
 
-![Chatbot UI](images/Monopoly.png)
+![Chatbot UI](Images/Monopoly.png)
 
 This project implements a Retrieval-Augmented Generation (RAG) chatbot using LangChain, ChromaDB, and the Ollama LLM model.  
 The chatbot is accessible via a simple web interface built with Flask.
