@@ -2,6 +2,9 @@ from query_data import query_rag
 from langchain_community.llms.ollama import Ollama
 import warnings
 warnings.filterwarnings("ignore")
+
+# Evaluation prompt for checking the correctness of the response.
+# This prompt is used to compare the expected response with the actual response from the model.
 EVAL_PROMPT = """
 Expected Response: {expected_response}
 Actual Response: {actual_response}

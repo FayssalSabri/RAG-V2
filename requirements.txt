@@ -3,3 +3,6 @@ langchain
 chromadb # Vector storage
 pytest
 boto3
+flask
+langchain-community
+sentence_transformers
