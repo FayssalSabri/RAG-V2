@@ -17,17 +17,16 @@ The chatbot is accessible via a simple web interface built with Flask.
 ---
 
 ## Project Structure
-
+```
 /project
 │
-├── app.py # Main Flask application
-├── chatbot.py # Chatbot RAG logic module
+├── app.py                    # Main Flask application
+├── chatbot.py                # Chatbot RAG logic module
 ├── get_embedding_function.py # Embedding extraction function
-├── requirements.txt # Python dependencies
+├── requirements.txt          # Python dependencies
 ├── templates/
-│ └── index.html # HTML template for web UI
-
-<pre><code>```plaintext /project │ ├── app.py # Main Flask application ├── chatbot.py # Chatbot RAG logic module ├── get_embedding_function.py# Embedding extraction function ├── requirements.txt # Python dependencies ├── templates/ │ └── index.html # HTML template for web UI ``` </code></pre>
+│   └── index.html            # HTML template for web UI
+```
 
 ---
 
