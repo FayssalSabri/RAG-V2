@@ -5,7 +5,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 def get_embedding_function():
-
+    
     embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 
     # embeddings = OllamaEmbeddings(model="nomic-embed-text")
